@@ -13,7 +13,7 @@
 - [Etapa 2: Preparação do Cluster e Instalação do ArgoCD](#etapa-2)
 - [Etapa 3: Acesso e Configuração do ArgoCD](#etapa-3)
 - [Etapa 4: Deploy da Aplicação Online Boutique](#etapa-4)
-- [Etapa 5: Configurações finais da aplicação](#etapa-5).
+- [Etapa 5: Configurações finais da aplicação](#etapa-5)
 - [Problema encontrado: Pending no currencyservice](#problema-encontrado)
 - [Conclusão](#conclusão)
 
