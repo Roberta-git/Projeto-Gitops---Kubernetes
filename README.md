@@ -75,6 +75,11 @@ kubectl get pods -n argocd
 
 * Aparecerá uma lista de podss e o ideal é que todos apresentem status de "Running". Pode demorar alguns minutos para carregar.
 
+ <img src=""  alt="" width="700"/>
+</p>
+     
+
+
 
 ## Etapa 3: Acesse o ArgoCD via Web
 
@@ -131,7 +136,7 @@ kubectl get pods
 3. Após a confirmação dos pods rodando, a página da Online Boutique poderá apareer perfeitamente.
 
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/6f865cbb-0050-4124-8e7d-3db213068f29"  alt="" width="700"/>
 </p>
      
 
