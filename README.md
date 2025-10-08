@@ -76,9 +76,9 @@ kubectl get pods -n argocd
 * Aparecerá uma lista de podss e o ideal é que todos apresentem status de "Running". Pode demorar alguns minutos para carregar.
 
 
-Etapa 3: Acesse o ArgoCD via Web
+## Etapa 3: Acesse o ArgoCD via Web
 
-### Passo 1: Ativar op port-forward
+#### Passo 1: Ativar op port-forward
 
 1. Para criar uma conexão entre o navegador e o ArgoCD, para o acesso via navegador, use o comando:
 ```
