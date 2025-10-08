@@ -109,8 +109,7 @@ kubectl get pods -n argocd
 
 
 
-## Etapa 3: Acesse o ArgoCD via Web
-
+## Etapa 3
 #### Passo 1: Ativar op port-forward
 
 1. Para criar uma conexão entre o navegador e o ArgoCD, para o acesso via navegador, use o comando:
@@ -158,7 +157,7 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 </p>
 
 
-## Etapa 4
+## Etapa 5
 
 #### Passo 1: Verificação do Status
 
