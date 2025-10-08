@@ -5,6 +5,34 @@
 
 
 
+## Sumário
+
+- [Introdução](#projeto-gitops-de-kubernetes)
+- [Ferramentas Utilizadas](#ferramentas-utilizadas)
+- [Etapa 1: Preparação do Repositório](#etapa-1)
+- [Etapa 2: Preparação do Cluster e Instalação do ArgoCD](#etapa-2)
+- [Etapa 3: Acesso e Configuração do ArgoCD](#etapa-3)
+- [Etapa 4: Deploy da Aplicação Online Boutique](#etapa-4)
+- [Problema encontrado: Pending no currencyservice](#problema-encontrado)
+- [Conclusão](#conclusão)
+
+---
+
+## Ferramentas Utilizadas
+
+- **Git** – Para versionamento dos arquivos e colaboração no desenvolvimento.
+- **GitHub** – Hospedagem dos repositórios, incluindo o repositório do Fork (aplicação) e o repositório GitOps (manifests).
+- **Minikube** – Cluster Kubernetes local para simular um ambiente real de deploy.
+- **kubectl** – Ferramenta de linha de comando para gerenciar recursos Kubernetes.
+- **ArgoCD** – Ferramenta GitOps para deploy, sincronização e visualização de aplicações via Git.
+- **Online Boutique** – Aplicação de exemplo composta por microserviços.
+- **Terminal/PowerShell** – Execução de todos os comandos e scripts necessários durante o processo.
+
+---
+
+
+
+
 
 
 
