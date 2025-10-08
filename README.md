@@ -75,7 +75,7 @@ kubectl get pods -n argocd
 
 * Aparecerá uma lista de podss e o ideal é que todos apresentem status de "Running". Pode demorar alguns minutos para carregar.
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/f6f8c929-922c-4765-971a-eb3a7b88955e"  alt="" width="700"/>
 </p>
      
 
