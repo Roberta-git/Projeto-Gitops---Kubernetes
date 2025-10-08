@@ -131,6 +131,11 @@ kubectl get pods
 3. Após a confirmação dos pods rodando, a página da Online Boutique poderá apareer perfeitamente.
 
 
+ <img src=""  alt="" width="700"/>
+</p>
+     
+
+
 ### Problema encontrado!
 
 Ao executar o deploy, o pod currencyservice ficava com status "pending".
