@@ -126,7 +126,7 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 2. Clique em "Create".
 
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/639194a7-527d-435b-921c-f5eb0d144098"  alt="" width="700"/>
 </p>
 
 
