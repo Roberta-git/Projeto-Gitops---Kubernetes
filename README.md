@@ -102,6 +102,12 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ```
 
 
+
+ <img src=""  alt="" width="700"/>
+</p>
+     
+
+
 ## Etapa 3
 
 #### Passo 1: Criar App no ArgoCD
@@ -118,6 +124,10 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 * Namespace: default
 
 2. Clique em "Create".
+
+
+ <img src=""  alt="" width="700"/>
+</p>
 
 
 ## Etapa 4
