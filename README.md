@@ -15,6 +15,12 @@
 1. Acesse o link: https://github.com/GoogleCloudPlatform/microservices-demo, no canto superior da página clique em  "Fork" para criar uma cópia desse repositório na sua conta do GitHub.
    * O Fork é uma cópia do repositório que pode sofrer modificações sem alterar o repositório original.
 
+ <img src=""  alt="" width="700"/>
+</p>
+     
+
+
+
 #### Passo 2: Criar repositório GitOps
 É importante criar um repositório separado do Fork, para que possa anexar o manifesto necessário para o deploy. A estrutura utilizada será:
 
