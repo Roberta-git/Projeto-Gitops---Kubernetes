@@ -217,11 +217,28 @@ Para realizar a parte opcional do projeto e adicinar mais réplicas ao ArgoCD, s
 
 
 #### Passo 1: Alterar o manifesto YAML 
-Edite o arquivo k8s, adicionando a linha `replicas: (quantidade de réplicas que você deseja)`, o bloco `spec` de cada Deployment e salve o arquivo.
+Edite o arquivo k8s/online-boutique.yaml, adicionando a linha `replicas: (quantidade de réplicas que você deseja)`, o bloco `spec` de cada Deployment e salve o arquivo.
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/c9cd2b70-b218-4754-8976-983880fe38f1"  alt="" width="700"/>
 </p>
-     
+
+
+
+#### Passo 2: Commit e push
+Faça o Commit e push para salvar as alterações feitas.
+
+```
+git add k8s/online-boutique.yaml
+git commit -m "Ajusta número de réplicas dos microserviços"
+git pull origin main            
+git push origin main
+
+```
+
+Etapa 3: Sincronização
+Abra o ArgoCD no navegador e clique em `Sync` para sincronizar os dados.
+Verifique se aparece o número de pods desejado.
+
 
 
 ## Conclusão
