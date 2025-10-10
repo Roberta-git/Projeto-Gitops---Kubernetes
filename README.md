@@ -241,7 +241,7 @@ Abra o ArgoCD no navegador e clique em `Sync` para sincronizar os dados.
 Verifique se aparece o número de pods desejado no ArgoCD.
 
 
- <img src=""  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/306b1463-4d9c-46d2-8349-7edc18155211"  alt="" width="700"/>
 </p>
 
 
