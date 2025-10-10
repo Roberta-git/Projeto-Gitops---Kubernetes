@@ -238,14 +238,23 @@ git push origin main
 
 Etapa 3: Sincronização
 Abra o ArgoCD no navegador e clique em `Sync` para sincronizar os dados.
-Verifique se aparece o número de pods desejado no ArgoCD e no terminal, para verificar, execute:
+Verifique se aparece o número de pods desejado no ArgoCD.
+
+
+ <img src=""  alt="" width="700"/>
+</p>
+
+
+
+E no terminal, para verificar, execute:
 
 ```
 kubectl get deployment
 kubectl get pods
 ```
 
-
+ <img src=""  alt="" width="700"/>
+</p>
 
 
 ## Conclusão
