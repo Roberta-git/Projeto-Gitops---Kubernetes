@@ -1,6 +1,6 @@
 # Projeto GitOps de Kubernetes
 
-> A documentação a seguir, tem como objetivo apresentar um tutorial de como realizar um deploy GitOps local, usando Kubernetes e ArgoiCD para aplicação da Online Boutique.
+> A documentação a seguir, tem como objetivo apresentar um tutorial de como realizar um deploy GitOps local, usando Kubernetes e ArgoCD para aplicação da Online Boutique.
 
 
 
@@ -22,7 +22,7 @@
 ## Ferramentas Utilizadas
 
 - **Git** – Para versionamento dos arquivos e colaboração no desenvolvimento.
-- **GitHub** – Hospedagem dos repositórios, incluindo o repositório do Fork (aplicação) e o repositório GitOps (manifests).
+- **GitHub** – Hospedagem dos repositórios, incluindo o repositório do Fork (aplicação) e o repositório GitOps (manifestos).
 - **Minikube** – Cluster Kubernetes local para simular um ambiente real de deploy.
 - **kubectl** – Ferramenta de linha de comando para gerenciar recursos Kubernetes.
 - **ArgoCD** – Ferramenta GitOps para deploy, sincronização e visualização de aplicações via Git.
@@ -41,7 +41,7 @@
 
 #### Passo 1: Criar Fork e repositório no GitHub
 
-1. Acesse o link: https://github.com/GoogleCloudPlatform/microservices-demo, no canto superior da página clique em  "Fork" para criar uma cópia desse repositório na sua conta do GitHub.
+1. Acesse o link: https://github.com/GoogleCloudPlatform/microservices-demo, no canto superior da página, clique em  "Fork" para criar uma cópia desse repositório na sua conta do GitHub.
    * O Fork é uma cópia do repositório que pode sofrer modificações sem alterar o repositório original.
 
  <img src="https://github.com/user-attachments/assets/d299d708-e656-41d5-ab96-73d4f027ffff"  alt="" width="700"/>
@@ -67,7 +67,7 @@ gitops
   cd seurepositorio
   ```
 
-2. Bauixe o arquivo "release" do fork e o renomeie para online-boutique.yaml. Crie uma pasta chamada  k8s dentro do seu repositório e mova o arquivo para a pasta.
+2. Baixe o arquivo "release" do fork e o renomeie para online-boutique.yaml. Crie uma pasta chamada  k8s dentro do seu repositório e mova o arquivo para a pasta.
 
 3. Faça o commit e push do arquivo:
 ```
@@ -81,17 +81,17 @@ git push origin main
 
 #### Passo 1: Iniciar o cluster e instalar o ArgoCD
 
-1. Com o minekube instalado, inicie o cluster
+1. Com o minekube instalado, inicie o cluster.
 ```
 
 minikube start
 ```
 
-2. Crie o namespace onde o ArgoCD irá rodar
+2. Crie o namespace onde o ArgoCD irá rodar.
 ```
 kubectl create namespace argocd
 ```
-3. Fça a instalação do ArgoCD usando o manifesto oficial
+3. Faça a instalação do ArgoCD usando o manifesto oficial.
 ```
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
@@ -102,7 +102,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl get pods -n argocd
 ```
 
-* Aparecerá uma lista de podss e o ideal é que todos apresentem status de "Running". Pode demorar alguns minutos para carregar.
+* Aparecerá uma lista de pods e o ideal é que todos apresentem status de "Running". Pode demorar alguns minutos para carregar.
 
  <img src="https://github.com/user-attachments/assets/f6f8c929-922c-4765-971a-eb3a7b88955e"  alt="" width="700"/>
 </p>
@@ -111,7 +111,7 @@ kubectl get pods -n argocd
 
 
 ## Etapa 3
-#### Passo 1: Ativar op port-forward
+#### Passo 1: Ativar o port-forward
 
 1. Para criar uma conexão entre o navegador e o ArgoCD, para o acesso via navegador, use o comando:
 ```
@@ -123,7 +123,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 https://localhost:8080
 ```
 
-3. Para fazer o login, usre "admin" como usuário padrão e para descobrir a senha, utilize o comando:
+3. Para fazer o login, use "admin" como usuário padrão e para descobrir a senha, utilize o comando:
 
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }
@@ -165,7 +165,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 * Como  o ArgoCD ainda não foi sincronizado, o status deverá aparecer como "OutOfSync".
   
-1. Para sicronizar o app, clique em "Sync" e aguarde até que apareça o status de saudável
+1. Para sicronizar o app, clique em `Sync` e aguarde até que apareça o status de saudável
    
 2. Para verificar se os pods então rodando corretamente, execute no terminal:
 ```
@@ -185,28 +185,28 @@ kubectl get pods
 Ao executar o deploy, o pod currencyservice ficava com status "pending".
 No terminal, com o comando `kubectl getr pods` era exibido `currencyservice-768c464f5-sr9lz   0/1  Pending  0  10m`.  E ao rodar `kubectl describe pod currencyservice-768c464f5-sr9lz` foi exibido `Warning  FailedScheduling  ...  0/1 nodes are available: 1 Insufficient cpu.`. Demonstrando que o Minikube não tinha espaço o suficiente na CPU.
 
-* Para a resolução do problema, foi necessário aumentar os recursos alocados para o Minekube através dos passos:
+* Para a resolução do problema, foi necessário aumentar os recursos alocados para o Minikube através dos passos:
 
-1. No Termianl, como administradoer, parar o Minekube de deletar o cluster.
+1. No Termianl, como administrador, parar o Minekube de deletar o cluster.
 
 ```
 minikube stop
 minikube delete
 ```
 
-2. Configurar mais CPU e memória
+2. Configurar CPU e memória para obter mais espaço.
 
 ```
 minikube config set cpus 4
 minikube config set memory 4096
 ```
 
-3. Reniciar o Minekube
+3. Reniciar o Minikube
 ```
 minikube start
 ```
 
-4. Após reiniciar, verificar se os pods estavam rodando corretamente, mostrando que oo problema foi resolvido.
+4. Após reiniciar, verificar se os pods estão rodando corretamente, mostrando que o problema foi resolvido.
 ```
 kubectl get pods
 ```
@@ -226,7 +226,7 @@ Edite o arquivo k8s/online-boutique.yaml, adicionando a linha `replicas: (quanti
 
 
 #### Passo 2: Commit e push
-Faça o Commit e push para salvar as alterações feitas.
+Faça o commit e push para salvar as alterações feitas.
 
 ```
 git add k8s/online-boutique.yaml
