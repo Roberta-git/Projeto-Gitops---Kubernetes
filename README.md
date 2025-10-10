@@ -15,7 +15,7 @@
 - [Etapa 4: Deploy da Aplicação Online Boutique](#etapa-4)
 - [Etapa 5: Configurações finais da aplicação](#etapa-5)
 - [Problema encontrado: Pending no currencyservice](#problema-encontrado)
-- [Adicionando réplicas](#adiconando-réplicas)
+- [Adicionando réplicas](#adiconando-replicas)
 - [Conclusão](#conclusão)
 
 ---
