@@ -187,7 +187,7 @@ No terminal, com o comando `kubectl getr pods` era exibido `currencyservice-768c
 
 * Para a resolução do problema, foi necessário aumentar os recursos alocados para o Minikube através dos passos:
 
-1. No Termianl, como administrador, parar o Minekube de deletar o cluster.
+1. No Termianl, como administrador, parar o Minikube de deletar o cluster.
 
 ```
 minikube stop
@@ -220,7 +220,7 @@ Para realizar a parte opcional do projeto e adicinar mais réplicas ao ArgoCD, s
 #### Passo 1: Alterar o manifesto YAML 
 Edite o arquivo k8s/online-boutique.yaml, adicionando a linha `replicas: (quantidade de réplicas que você deseja)`, o bloco `spec` de cada Deployment e salve o arquivo.
 
- <img src="https://github.com/user-attachments/assets/c9cd2b70-b218-4754-8976-983880fe38f1"  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/aea90ebd-3f1f-45b4-82b3-d098cfaca874"  alt="" width="700"/>
 </p>
 
 
