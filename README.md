@@ -81,7 +81,7 @@ git push origin main
 
 #### Passo 1: Iniciar o cluster e instalar o ArgoCD
 
-1. Com o minekube instalado, inicie o cluster.
+1. Com o Minikube instalado, inicie o cluster.
 ```
 
 minikube start
@@ -118,7 +118,7 @@ kubectl get pods -n argocd
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
-2. Abra o navgador e e use a URl:
+2. Abra o navegador e e use a URl:
 ```
 https://localhost:8080
 ```
@@ -165,14 +165,14 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 * Como  o ArgoCD ainda não foi sincronizado, o status deverá aparecer como "OutOfSync".
   
-1. Para sicronizar o app, clique em `Sync` e aguarde até que apareça o status de saudável
+1. Para sincronizar o app, clique em `Sync` e aguarde até que apareça o status de saudável
    
 2. Para verificar se os pods então rodando corretamente, execute no terminal:
 ```
 kubectl get pods
 ```
 
-3. Após a confirmação dos pods rodando, a página da Online Boutique poderá apareer perfeitamente.
+3. Após a confirmação dos pods rodando, a página da Online Boutique poderá aparecer perfeitamente.
 
 
  <img src="https://github.com/user-attachments/assets/6f865cbb-0050-4124-8e7d-3db213068f29"  alt="" width="700"/>
