@@ -148,7 +148,7 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 * Repository URL: link HTTPS do repositório que você criou no GitHub
 * Revision: main
 * Path: k8s
-* Cluster URL: use o endereço do minikube
+* Cluster URL: https://kubernetes.default.svc
 * Namespace: default
 
 2. Clique em "Create".
