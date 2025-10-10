@@ -210,6 +210,20 @@ minikube start
 kubectl get pods
 ```
 
+
+
+### Adicionando réplicas
+Para realizar a parte opcional do projeto e adicinar mais réplicas ao ArgoCD, siga os seguintes passos:
+
+
+#### Passo 1: Alterar o manifesto YAML 
+Edite o arquivo k8s, adicionando a linha `replicas: (quantidade de réplicas que você deseja)`, o bloco `spec` de cada Deployment e salve o arquivo.
+
+ <img src=""  alt="" width="700"/>
+</p>
+     
+
+
 ## Conclusão
 Com o projeto realizado, foi possíel colocar em prática, o aprendizado sobre Kubernetes e ArgoCD. Além de apresentar o tutorial do GitOps para o ambiente de Kubernetes.
 
