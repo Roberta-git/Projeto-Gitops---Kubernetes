@@ -253,8 +253,9 @@ kubectl get deployment
 kubectl get pods
 ```
 
- <img src="https://github.com/user-attachments/assets/49717875-c1ee-4d5e-ad70-50ad026a598c"  alt="" width="700"/>
+ <img src="https://github.com/user-attachments/assets/689605dd-4152-4756-af9a-8f4c2009c769"  alt="" width="700"/>
 </p>
+
 
 
 ## Conclusão
