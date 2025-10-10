@@ -7,7 +7,6 @@
 
 ## Sumário
 
-- [Introdução](#projeto-gitops-de-kubernetes)
 - [Ferramentas Utilizadas](#ferramentas-utilizadas)
 - [Etapa 1: Preparação do Repositório](#etapa-1)
 - [Etapa 2: Preparação do Cluster e Instalação do ArgoCD](#etapa-2)
