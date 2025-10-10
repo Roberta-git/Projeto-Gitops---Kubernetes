@@ -126,7 +126,8 @@ https://localhost:8080
 3. Para fazer o login, usre "admin" como usuário padrão e para descobrir a senha, utilize o comando:
 
 ```
-kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}"
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | % { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }
+
 ```
 
 
@@ -237,7 +238,13 @@ git push origin main
 
 Etapa 3: Sincronização
 Abra o ArgoCD no navegador e clique em `Sync` para sincronizar os dados.
-Verifique se aparece o número de pods desejado.
+Verifique se aparece o número de pods desejado no ArgoCD e no terminal, para verificar, execute:
+
+```
+kubectl get deployment
+kubectl get pods
+```
+
 
 
 
