@@ -163,7 +163,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 #### Passo 1: Verificação do Status
 
-* Como  o ArgoCD ainda não foi sincronizado, o status deverá aparecer como "OutOfSync".
+* Como o ArgoCD ainda não foi sincronizado, o status deverá aparecer como "OutOfSync".
   
 1. Para sincronizar o app, clique em `Sync` e aguarde até que apareça o status de saudável
    
